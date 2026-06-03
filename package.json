@@ -1,0 +1,28 @@
+{
+  "name": "schoolpulse",
+  "version": "2.1.0",
+  "description": "SchoolPulse — International School Intelligence Platform by Orion Soft Limited",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev:server": "npm --workspace schoolpulse-server run dev",
+    "dev:client": "npm --workspace schoolpulse-client run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm --workspace schoolpulse-client run build",
+    "start": "npm --workspace schoolpulse-server start",
+    "migrate": "node server/migrate.js",
+    "migrate:rollback": "cd server && npx knex migrate:rollback",
+    "seed": "npm --workspace schoolpulse-server run seed",
+    "test": "npm --workspace schoolpulse-server test",
+    "vercel-build": "cd client && npm install && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

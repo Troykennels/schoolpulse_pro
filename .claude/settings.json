@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "c:\\Users\\user\\.claude\\projects\\c--Users-user\\memory"
+    ],
+    "allow": [
+      "PowerShell(cd \"c:\\\\Users\\\\user\\\\Desktop\\\\schoolpulse_v2.1\\\\sp2\\\\server\"; $env:DATABASE_URL=\"postgresql://postgres.yqjdrwacmlhzpsnufisz:Mathewade163%40%40@aws-0-eu-west-1.pooler.supabase.com:6543/postgres\"; node migrate.js 2>&1)"
+    ]
+  }
+}
