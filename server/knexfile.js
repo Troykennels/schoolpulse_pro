@@ -10,7 +10,7 @@ const usePostgres = Boolean(process.env.DATABASE_URL) || process.env.DB_CLIENT =
 // SQLite config — used locally when no DATABASE_URL is set (zero setup)
 const sqliteFilename = process.env.SQLITE_FILENAME || path.join(__dirname, 'data', 'schoolpulse.sqlite3');
 if (!usePostgres) {
-  fs.mkdirSync(path.dirname(sqliteFilename), { recursive: true });
+  try { fs.mkdirSync(path.dirname(sqliteFilename), { recursive: true }); } catch (_) {}
 }
 
 const sqliteConfig = {
