@@ -10,8 +10,8 @@ server/node_modules/
 server/.env
 client/.env
 
-# Build output
-client/dist/
+# Build output — kept in git so Vercel doesn't need to rebuild
+# client/dist/
 
 # Database files
 server/data/
