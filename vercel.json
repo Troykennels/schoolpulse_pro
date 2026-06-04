@@ -5,7 +5,8 @@
       "src": "server/index.js",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["client/dist/**"]
+        "includeFiles": ["client/dist/**"],
+        "bundle": false
       }
     }
   ],
