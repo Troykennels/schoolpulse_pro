@@ -17,7 +17,7 @@
     "migrate:rollback": "cd server && npx knex migrate:rollback",
     "seed": "npm --workspace schoolpulse-server run seed",
     "test": "npm --workspace schoolpulse-server test",
-    "vercel-build": "cd client && npm install && npm run build"
+    "vercel-build": "npm install --prefix client && npm run build --prefix client"
   },
   "devDependencies": {
     "concurrently": "^8.2.0"
